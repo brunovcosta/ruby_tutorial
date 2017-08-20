@@ -1,4 +1,4 @@
-#1º Dia
+# 1º Dia
 ## Ruby
 - filosofia
 - variáveis e constantes
