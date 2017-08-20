@@ -36,13 +36,49 @@
 - módulos
 	- include
 	- extend
+- gems
+	- bundler
+	- rake
 ## Rails
 - filosofia e conceitos
 - web
+	- HTTP
+- banco de dados
+	- modelo relacional
+	- migrações
+	- schema
+	- semente
 - MVC
-- fluxo de execução
+	- ActiveRecord
+		- queries
+			- all/where/find/find_by
+			- create/create!
+			- update/update!
+			- destroy/destroy!/delete/delete!
+		- validações
+	- ActionController
+		- render
+		- before_action
+		- redirect_to
+	- views
 - Helpers
+- fluxo de execução
+	- rotas
+		- RESTful
+- testes
+	- rspec
 - console ( rake/rails * )
+	- new
+	- server/s
+	- console/c
+	- dbconsole/db
+	- runner/r
+	- generate/g/destroy/d
+		- assets
+		- controller
+		- migration
+		- model
+		- scaffold
 
 # 2º Dia
 ## Projeto (Indicador de filmes)
