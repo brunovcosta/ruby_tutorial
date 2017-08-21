@@ -1,5 +1,11 @@
-# 1º Dia
-## Ruby
+# Revisar
+## Após o 1º Dia
+Recomendo dar uma olhada bem rápida nos conceitos de Ruby e de Rails listados em Planejamento. Tentem recriar o projeto feito em sala (Site com uma única página com "Olá mundo!").
+Caso tenham mais interesse, recomento antecipar os temas da próxima aula e tentar criar algo com a ferramenta.
+
+# Planejamento
+## 1º Dia
+### Ruby
 - filosofia
 - variáveis
 	- locais
@@ -39,7 +45,7 @@
 - gems
 	- bundler
 	- rake
-## Rails
+### Rails
 - filosofia e conceitos
 - web
 	- HTTP
@@ -80,12 +86,12 @@
 		- model
 		- scaffold
 
-# 2º Dia
-## Projeto (Indicador de filmes)
+## 2º Dia
+### Projeto (Indicador de filmes)
 - modelagem (Rails + PostgreSQL)
 - Cadastro de usuários (modelagem, implementação e cuidados)
 - Filmes e relações 
 - Busca full-text
-## Produção
+### Produção
 - Formas de colocar em produção
 - Cuidados e segurança
