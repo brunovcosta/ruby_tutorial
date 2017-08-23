@@ -145,4 +145,5 @@ end
 ```
 
 ## Próximos passos
-Usar os valores numéricos
+- Usar os valores numéricos
+- Não guardar senha no banco de dados
