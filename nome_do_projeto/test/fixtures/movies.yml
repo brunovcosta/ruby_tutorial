@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Rank: MyString
+  Title: MyString
+  Genre: MyString
+  Description: MyString
+  Director: MyString
+  Actors: MyString
+  Year: MyString
+  Runtime: MyString
+  Rating: MyString
+  Votes: MyString
+  Revenue: MyString
+  Metascore: MyString
+
+two:
+  Rank: MyString
+  Title: MyString
+  Genre: MyString
+  Description: MyString
+  Director: MyString
+  Actors: MyString
+  Year: MyString
+  Runtime: MyString
+  Rating: MyString
+  Votes: MyString
+  Revenue: MyString
+  Metascore: MyString

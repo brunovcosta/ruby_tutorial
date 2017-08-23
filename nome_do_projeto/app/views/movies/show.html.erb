@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @movie.Rank %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.Title %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @movie.Genre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.Description %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @movie.Director %>
+</p>
+
+<p>
+  <strong>Actors:</strong>
+  <%= @movie.Actors %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie.Year %>
+</p>
+
+<p>
+  <strong>Runtime:</strong>
+  <%= @movie.Runtime %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @movie.Rating %>
+</p>
+
+<p>
+  <strong>Votes:</strong>
+  <%= @movie.Votes %>
+</p>
+
+<p>
+  <strong>Revenue:</strong>
+  <%= @movie.Revenue %>
+</p>
+
+<p>
+  <strong>Metascore:</strong>
+  <%= @movie.Metascore %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

@@ -1,0 +1,11 @@
+<h1>PUCflix</h1>
+<p>Seja bem vindo!</p>
+
+<% if not session[:user_id] %>
+	<%= form_for(:user, {url: "/login"} ){|f| %>
+		<%= f.text_field :login, placeholder: "login" %>
+		<%= f.password_field :senha, placeholder: "*****" %>
+		<%= f.submit :login %>
+	<% } %>
+
+<% end %>

@@ -1,0 +1,65 @@
+<%= form_for(@movie) do |f| %>
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Rank %><br>
+    <%= f.text_field :Rank %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br>
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :Genre %><br>
+    <%= f.text_field :Genre %>
+  </div>
+  <div class="field">
+    <%= f.label :Description %><br>
+    <%= f.text_field :Description %>
+  </div>
+  <div class="field">
+    <%= f.label :Director %><br>
+    <%= f.text_field :Director %>
+  </div>
+  <div class="field">
+    <%= f.label :Actors %><br>
+    <%= f.text_field :Actors %>
+  </div>
+  <div class="field">
+    <%= f.label :Year %><br>
+    <%= f.text_field :Year %>
+  </div>
+  <div class="field">
+    <%= f.label :Runtime %><br>
+    <%= f.text_field :Runtime %>
+  </div>
+  <div class="field">
+    <%= f.label :Rating %><br>
+    <%= f.text_field :Rating %>
+  </div>
+  <div class="field">
+    <%= f.label :Votes %><br>
+    <%= f.text_field :Votes %>
+  </div>
+  <div class="field">
+    <%= f.label :Revenue %><br>
+    <%= f.text_field :Revenue %>
+  </div>
+  <div class="field">
+    <%= f.label :Metascore %><br>
+    <%= f.text_field :Metascore %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
