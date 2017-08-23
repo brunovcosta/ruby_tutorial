@@ -1,4 +1,9 @@
 class Movie < ApplicationRecord
+	has_many :votes
+	def voted_by? user
+		votes.find_by_user_id user[:id]
+	end
+
 	def self.tfidf  condition
 		columns = %w[Title Genre Description Director Actors]
 

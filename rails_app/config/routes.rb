@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :movies
   root "extra#home"
   post "/login" => "users#login"
+  get "/votar" => "votes#create"
+  get "/desvotar" => "votes#destroy"
 end

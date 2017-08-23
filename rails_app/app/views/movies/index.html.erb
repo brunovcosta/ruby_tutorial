@@ -5,37 +5,22 @@
 <table>
   <thead>
     <tr>
-      <th>Rank</th>
-      <th>Title</th>
-      <th>Genre</th>
-      <th>Description</th>
       <th>Director</th>
-      <th>Actors</th>
-      <th>Year</th>
-      <th>Runtime</th>
-      <th>Rating</th>
-      <th>Votes</th>
-      <th>Revenue</th>
-      <th>Metascore</th>
-      <th colspan="3"></th>
+      <th>Title</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.Rank %></td>
-        <td><%= movie.Title %></td>
-        <td><%= movie.Genre %></td>
-        <td><%= movie.Description %></td>
         <td><%= movie.Director %></td>
-        <td><%= movie.Actors %></td>
-        <td><%= movie.Year %></td>
-        <td><%= movie.Runtime %></td>
-        <td><%= movie.Rating %></td>
-        <td><%= movie.Votes %></td>
-        <td><%= movie.Revenue %></td>
-        <td><%= movie.Metascore %></td>
+        <td><%= movie.Title %></td>
+	<% if movie.voted_by? session[:user] %>
+        <td><%= link_to 'Descurtir', desvotar_path(movie_id: movie) %></td>
+	<% else %>
+        <td><%= link_to 'Curtir', votar_path(movie_id: movie) %></td>
+	<% end %>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

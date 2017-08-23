@@ -58,7 +58,9 @@ Rails.application.routes.draw do
   resources :movies
   root "extra#home"
   post "/login" => "users#login"
+  get "/votar" => "votes#create"
 end
+
 ```
 
 
@@ -113,6 +115,25 @@ def create
 end
 ```
 
+#### app/controllers/votes_controller.rb
+voto redirecionar de volta
+```
+class VotesController < ApplicationController 
+  def create 
+    @vote = Vote.create(user_id: session[:user][:id], movie_id: params[:movie_id]) 
+ 
+    redirect_to :back 
+  end 
+ 
+  def destroy 
+    Vote.find_by(user_id: session[:user][:id], movie_id: params[:movie_id]).destroy 
+ 
+    redirect_to :back 
+  end 
+end 
+
+```
+
 #### app/views/users/_form.html.erb
 Troque o input de senha de text_field para password_field
 ```
@@ -145,9 +166,53 @@ Troque o input de senha de text_field para password_field
 <% end %> 
 ```
 
+#### app/views/movies/index.html.erb
+Remova a informação inútil e adicione o link para voto
+```
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Director</th>
+      <th>Title</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.Director %></td>
+        <td><%= movie.Title %></td>
+        <% if movie.voted_by? session[:user] %>
+        <td><%= link_to 'Descurtir', desvotar_path(movie_id: movie) %></td>
+        <% else %>
+        <td><%= link_to 'Curtir', votar_path(movie_id: movie) %></td>
+        <% end %>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>
+```
+
 #### app/models/movie.rb
 ```
 class Movie < ApplicationRecord
+        has_many :votes
+        def voted_by? user
+                votes.find_by_user_id user[:id]
+        end
+
 	def self.tfidf  condition
 		columns = %w[Title Genre Description Director Actors]
 
