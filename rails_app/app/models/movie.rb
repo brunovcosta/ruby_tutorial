@@ -8,6 +8,9 @@ class Movie < ApplicationRecord
 		columns = %w[Title Genre Description Director Actors]
 
 		filtered = where(condition)
+		if filtered.count==0
+			return []
+		end
 		word_list = [
 			filtered.pluck('Title').map{|t| t.split(" ")},
 			filtered.pluck('Genre').map{|g| g[1..-2].split(",")},
@@ -23,9 +26,6 @@ class Movie < ApplicationRecord
 		end.join("+")
 
 
-		number_order = %[Year Runtime Rating Votes Revenue Metascore].map do |column|
-
-		end
 
 		return Movie.all.order(word_order+" desc").offset(filtered.size)
 	end

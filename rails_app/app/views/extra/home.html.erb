@@ -1,4 +1,7 @@
 <% if session[:user] %>
+	<ul>
+		<%= @movies.first %>
+	</ul>
 	<%= link_to "iniciar",movies_path %>
 <% else %>
 	<h2>Faça login para acessar</h2>
