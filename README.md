@@ -3,6 +3,9 @@
 Recomendo dar uma olhada bem rápida nos conceitos de Ruby e de Rails listados em Planejamento. Tentem recriar o projeto feito em sala (Site com uma única página com "Olá mundo!").
 Caso tenham mais interesse, recomento antecipar os temas da próxima aula e tentar criar algo com a ferramenta.
 
+## 2º Dia
+[Clique aqui](./rails_app/README.md) ver o material da aula
+
 # Planejamento
 ## 1º Dia
 ### Ruby

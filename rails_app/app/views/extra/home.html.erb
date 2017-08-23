@@ -1,0 +1,14 @@
+<% if session[:user] %>
+	<%= link_to "iniciar",movies_path %>
+<% else %>
+	<h2>Faça login para acessar</h2>
+	<%= form_for :user, url: "/login" do |f| %>
+		<%= f.label :login %>
+		<%= f.text_field :login %>
+		<%= f.label :senha %>
+		<%= f.password_field "password"%>
+		<br>
+		<%= f.submit :login %>
+	<% end %>
+	<%= link_to "criar conta",new_user_path %>
+<% end %>

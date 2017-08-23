@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  movie: one
+  positive: false
+
+two:
+  user: two
+  movie: two
+  positive: false

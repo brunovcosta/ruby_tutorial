@@ -1,0 +1,1 @@
+rails g scaffold movies Rank:integer Title Genre Description Director Actors Year:integer Runtime:integer Rating:decimal Votes:integer Revenue:decimal Metascore:integer
